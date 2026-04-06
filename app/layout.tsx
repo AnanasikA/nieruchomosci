@@ -1,4 +1,3 @@
-import './globals.css';
 import Script from 'next/script';
 
 export default function RootLayout({
@@ -9,12 +8,11 @@ export default function RootLayout({
   return (
     <html lang="pl">
       <body>
-        {children}
-
         <Script
           src="https://cdn.lordicon.com/lordicon.js"
-          strategy="afterInteractive"
+          strategy="beforeInteractive"
         />
+        {children}
       </body>
     </html>
   );
