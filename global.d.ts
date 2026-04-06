@@ -1,6 +1,6 @@
-import React from 'react';
+import type React from 'react';
 
-declare global {
+declare module 'react/jsx-runtime' {
   namespace JSX {
     interface IntrinsicElements {
       'lord-icon': React.DetailedHTMLProps<
@@ -9,9 +9,8 @@ declare global {
       > & {
         src?: string;
         trigger?: string;
-        delay?: string;
+        delay?: string | number;
         colors?: string;
-        style?: React.CSSProperties;
       };
     }
   }
